@@ -1,0 +1,166 @@
+html {
+  background-color: #2e2e2e;
+  background-image: linear-gradient(130deg, #444 50%, #2e2e2e 50%);
+  min-height: 1000px;
+  font-family: "helvetica neue";
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
+}
+
+main {
+  text-align: center;
+  flex: 1 0 auto;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #333;
+  border-radius: 8px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 15px 15px 45px rgba(0, 0, 0, 1);
+}
+
+#heading {
+  background-color: #555;
+  text-align: center;
+}
+
+form.edit {
+  display: flex;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #666;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  margin-left: 0;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 20px;
+  color: #ccc;
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button.add {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #888;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+  margin: 20px; /* Added margin on top */
+
+}
+
+button.add:hover {
+  background-color: #aaa;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+
+
+button.add:hover {
+  background-color: #aaa;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+
+button.edit {
+  margin-left: 0px;
+  margin-right: 20px;
+  border: none;
+  background: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+button.edit:hover {
+  color: #fff;
+}
+
+.icon {
+  height: 20px;
+}
+input[type="text"] {
+  text-align: left;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: #444;
+  font-size: 20px;
+  font-weight: 200;
+  width: 80%;
+  color: #ccc;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  margin: 20px; /* Added padding under the input field */
+  padding: 20px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: #555;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+}
+
+
+input[type="text"]:focus {
+  outline: none;
+  background: #555;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+}
+
+::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+footer {
+  flex: 0 0 auto;
+  color: white;
+  text-align: center;
+}
+
+

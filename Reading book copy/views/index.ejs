@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Books | Book Reviews</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Books I’ve Read</h1>
+    <h3>Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or anywhere else.<br> This page will constantly update as I read more, so bookmark it if you want to check back in a few months. <br rating, recency, title</h3>
+  </header>
+
+  <!-- Link to show form on a new page -->
+  <a class="show-form-button" href="/books/add">Add a New Book</a>
+
+  <!-- Sort buttons -->
+  <div class="sort-buttons">
+    <form action="/sort/rating" method="GET" style="display:inline;">
+      <button type="submit">Sort by Rating</button>
+    </form>
+    
+    <!-- Form for sorting by Recency -->
+    <form action="/sort/recency" method="GET" style="display:inline;">
+      <button type="submit">Sort by Recency</button>
+    </form>
+    
+    <!-- Form for sorting by Title -->
+    <form action="/sort/title" method="GET" style="display:inline;">
+      <button type="submit">Sort by Title</button>
+    </form>
+    
+  </div>
+
+  <!-- Book list -->
+  <div class="book-list" id="book-list">
+    <% book.forEach(book => { %>
+      <div class="book">
+        <img src="<%= book.cover %>" alt="<%= book.title %> cover">
+        <div class="book-title"><%= book.title %></div>
+        <div class="book-details">
+          Notes: <%= book.notes %> | Rating: <%= book.rating %> | Read: <%= book.recency %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+  <script src="/js/books.js"></script>
+</body>
+</html>
